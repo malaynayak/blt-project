@@ -1,7 +1,7 @@
 project:
   machine_name: blt-project
   prefix: BLT
-  human_name: 'BLTed 8'
+  human_name: 'BLT DEMO'
   profile:
     name: lightning
   local:
@@ -9,7 +9,8 @@ project:
     hostname: 'local.${project.machine_name}.com'
 git:
   default_branch: master
-  remotes: {  }
+  remotes:
+    - 'bltdemosetup@svn-5767.devcloud.hosting.acquia.com:bltdemosetup.git'
 deploy:
   tag_source: true
 drush:
@@ -34,3 +35,5 @@ modules:
   prod:
     enable: [acquia_connector, shield]
     uninstall: [devel, views_ui]
+cloud:
+  appId: 670010fa-aef1-4c30-8710-d061efb0c79c
